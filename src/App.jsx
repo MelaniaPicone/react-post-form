@@ -24,6 +24,14 @@ const newFormData = {
 setFormData(newFormData);
 };
 
+const handleSubmit = (e) => {
+e.preventDefault();
+
+axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData).then ((resp) => {console.log(resp.data)}).catch(err => console.log("errore" + err));
+
+
+};
+
 
   return (
   <div className="container my-5">
@@ -34,7 +42,7 @@ setFormData(newFormData);
       </div>
 
 <div className="col-12">
-<form>
+<form onSubmit={handleSubmit}>
 <div className="row gy-3">
 
 <div className="col-12 col-md-4">
