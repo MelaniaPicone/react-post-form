@@ -10,7 +10,11 @@ const [formData, setFormData] = useState (
    public: false,
    body: "", 
   }
-)
+);
+
+const handleChange = () => {
+  console.log(formData);
+}
 
 
   return (
@@ -35,7 +39,8 @@ type="text"
 name="author"
 value={formData.author}
 className="form-control"
-placeholder="Autore" />
+placeholder="Autore" 
+onChange={handleChange}/>
 
 <label htmlFor="" className="form-label">
 Titolo
@@ -45,7 +50,8 @@ type="text"
 name="title"
 value={formData.title}
 className="form-control"
-placeholder="Titolo" />
+placeholder="Titolo" 
+onChange={handleChange}/>
 
 <label htmlFor="" className="form-label">
 Pubblico
@@ -56,6 +62,7 @@ type="checkbox"
 name="public"
 checked={formData.public}
 className="form-check"
+onChange={handleChange}
  />
 
 </div>
@@ -63,7 +70,7 @@ className="form-check"
 
 <div className="col-12">
   <label htmlFor="" className="form-label">Testo</label>
-<textarea name="body" id="body" value={formData.body} className="form-control" rows="4" placeholder="Testo"></textarea>
+<textarea name="body" id="body" value={formData.body} className="form-control" rows="4" placeholder="Testo"  onChange={handleChange}></textarea>
 
 </div>
 
