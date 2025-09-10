@@ -12,7 +12,8 @@ const [formData, setFormData] = useState (
   }
 );
 
-const handleChange = () => {
+
+const handleChange = (e) => {
 const {value, name, type, checked } = e.target;
 const newFormData = {
   ...formData,
@@ -25,7 +26,7 @@ setFormData(newFormData);
 
 
   return (
-  <div className="container">
+  <div className="container my-5">
     <div className="row">
       <div className="col-12"> 
 <h1>React Post Form</h1>
@@ -36,7 +37,7 @@ setFormData(newFormData);
 <form>
 <div className="row gy-3">
 
-<div className=" col-12 col-md-4">
+<div className="col-12 col-md-4">
 
 <label htmlFor="" className="form-label">
 Autore
